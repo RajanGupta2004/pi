@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Store Redirect</title>
+</head>
+<body>
+    <script>
+        window.onload = function() {
+    redirectToStore();
+};
+
+function redirectToStore() {
+    var userAgent = window.navigator.userAgent;
+    var isMac = /Macintosh|Mac OS X/.test(userAgent);
+    var isWindows = /Windows/.test(userAgent);
+
+    if (isMac) {
+        // Redirect to Apple Store
+        window.location.href = 'https://apps.apple.com/app/6499340194';
+    } else if (isWindows) {
+        // Redirect to Play Store
+        window.location.href = 'https://play.google.com/store/apps/details?id=in.getpi';
+    } else {
+        window.location.href = 'https://getpi.in/';
+        
+    }
+}
+
+    </script>
+</body>
+</html>
+
+
